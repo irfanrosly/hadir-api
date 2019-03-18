@@ -5,7 +5,12 @@ let router = require("express").Router();
 router.get("/", function(req, res) {
   res.json({
     status: "API is working!",
-    message: "Welcome to HADIR API crafted by Toi!"
+    get_student_all: "https://hadir-api.herokuapp.com/api/v2/students",
+    get_student:
+      "https://hadir-api.herokuapp.com/api/v2/student/{year}/{class}",
+    get_attendance_all: "https://hadir-api.herokuapp.com/api/v2/attendance",
+    get_attendance:
+      "https://hadir-api.herokuapp.com/api/v2/attendance/{YYYYMMDD}/{year}/{class}"
   });
 });
 
